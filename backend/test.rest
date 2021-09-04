@@ -1,0 +1,38 @@
+
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "email": "dfezfezrf",
+    "password": "ddzdfzd"
+}
+### 
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "dfezfezrf",
+    "password": "ddzdfzd"
+}
+###
+GET http://localhost:3000/api/sauces/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTMyMGNiMTJkYWViMjM0OWEyZDY0MzkiLCJpYXQiOjE2MzA3NDYzODIsImV4cCI6MTYzMDgzMjc4Mn0.ohe8ybNtj6YOokyLOpzy4dV87IvgZvmwq-CyhvrUdxU
+###
+POST http://localhost:3000/api/sauces/612f35cca3e364fe7f1b56e3/like
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTMyMGNiMTJkYWViMjM0OWEyZDY0MzkiLCJpYXQiOjE2MzA3NDYzODIsImV4cCI6MTYzMDgzMjc4Mn0.ohe8ybNtj6YOokyLOpzy4dV87IvgZvmwq-CyhvrUdxU
+Content-Type: application/json
+
+{
+    "likes": -1,
+    "userId": "61320cb12daeb2349a2d6439"
+}
+
+###
+PUT http://localhost:3000/api/sauces/612f35cca3e364fe7f1b56e3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTMyMGNiMTJkYWViMjM0OWEyZDY0MzkiLCJpYXQiOjE2MzA2NzAwMzksImV4cCI6MTYzMDc1NjQzOX0.OV7prL_xIRmDkXW8RFiDLDwfk_CElpAkKkxJ4mJsCQU
+Content-Type: application/json
+
+{
+    "likes": -15,
+    "name": "fzefzeezf"
+}
