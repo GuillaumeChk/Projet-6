@@ -8,7 +8,7 @@ const userRoutes = require('./routes/user');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://Gui:motdepasse@cluster0.2klb8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://'+process.env.DB_user+':'+process.env.DB_password+'@'+process.env.DB_cluster+'.2klb8.mongodb.net/'+process.env.DB_name+'?retryWrites=true&w=majority',
     { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB : réussie.'))
