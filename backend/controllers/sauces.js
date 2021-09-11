@@ -62,7 +62,17 @@ exports.modifyThing = (req, res, next) => {
     })
     .catch(error => res.status(500).json({ error }));
   }
-  Thing.updateOne({ _id: req.params.id }, { ...thingObject, _id: req.params.id })
+  Thing.updateOne({ _id: req.params.id }, 
+    { 
+      // ...thingObject, 
+      name: thingObject.name,
+      manufacturer: thingObject.manufacturer,
+      description: thingObject.description,
+      mainPepper: thingObject.mainPepper,
+      imageUrl: thingObject.imageUrl,
+      heat: thingObject.heat,
+      _id: req.params.id 
+    })
     .then(() => res.status(200).json({ message: 'Objet modifié !'}))
     .catch(error => res.status(400).json({ error }));
 };
